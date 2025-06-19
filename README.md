@@ -24,21 +24,26 @@ This project is a Machine Learning-based web app that predicts the likelihood of
 - HTML/CSS (if applicable for frontend)
 
 ---
-## 📂 Project Structure
+heart-disease-prediction/
+├── 📁 app/                    # Application files (Frontend + Backend)
+│   ├── app.py                # Main application (Flask/Streamlit/FastAPI)
+│   ├── 📁 templates/         # HTML templates (only for Flask)
+│   ├── 📁 static/            # CSS, JS, images (for styling)
+│   └── 📁 components/        # Reusable components (optional)
 │
-├── model/
-│ ├── heart_disease_model.pkl # Trained model
+├── 📁 model/                  # Machine Learning model files
+│   ├── heart_disease_model.pkl   # Trained ML model
+│   └── train_model.py            # Script to train the model
 │
-├── app/
-│ ├── app.py # Main backend (Flask or Streamlit app)
-│ ├── templates/ # HTML files (for Flask)
-│ └── static/ # CSS, JS, images
+├── 📁 data/                   # Dataset and data processing
+│   └── heart.csv             # Original dataset
 │
-├── data/
-│ └── heart.csv # Dataset
+├── 📁 notebooks/              # Jupyter notebooks (for EDA, model testing)
+│   └── heart_analysis.ipynb  # Exploratory data analysis notebook
 │
-├── requirements.txt # Python dependencies
-└── README.md # You are here
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+└── .gitignore                # Git ignore rules
 
 
 The model takes the following input features:
