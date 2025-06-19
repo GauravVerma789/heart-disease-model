@@ -24,7 +24,6 @@ This project is a Machine Learning-based web app that predicts the likelihood of
 - HTML/CSS (if applicable for frontend)
 
 ---
-
 ## 📂 Project Structure
 │
 ├── model/
