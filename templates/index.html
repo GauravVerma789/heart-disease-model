@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+    
+        form {
+            background-color: #ffffff;
+            padding: 30px 35px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+    
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+    
+        input, select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: border 0.3s ease;
+        }
+    
+        input:focus, select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    
+        button {
+            margin-top: 25px;
+            padding: 12px;
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+    
+        button:hover {
+            background-color: #43a047;
+        }
+    
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+    
+            form {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- <h1>Heart Disease Prediction</h1> -->
+    <form action="/predict" method="post">
+        <label>Age:</label>
+        <input type="number" name="age" required>
+
+        <label>Sex:</label>
+        <select name="sex" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label>Chest Pain Type:</label>
+        <select name="cp" required>
+            <option value="typical">Typical Angina</option>
+            <option value="atypical">Atypical Angina</option>
+            <option value="non-anginal">Non-Anginal Pain</option>
+            <option value="asymptomatic">Asymptomatic</option>
+        </select>
+
+        <label>Resting Blood Pressure (trestbps):</label>
+        <input type="number" name="trestbps" required>
+
+        <label>Cholesterol (chol):</label>
+        <input type="number" name="chol" required>
+
+        <label>Fasting Blood Sugar > 120 mg/dl (1 = True, 0 = False):</label>
+        <input type="number" name="fbs" min="0" max="1" required>
+
+        <label>Resting ECG:</label>
+        <select name="restecg" required>
+            <option value="normal">Normal</option>
+            <option value="abnormal">ST-T Abnormality</option>
+            <option value="hypertrophy">Left Ventricular Hypertrophy</option>
+        </select>
+
+        <label>Max Heart Rate Achieved (thalch):</label>
+        <input type="number" name="thalch" required>
+
+        <label>Exercise Induced Angina (1 = Yes, 0 = No):</label>
+        <input type="number" name="exang" min="0" max="1" required>
+
+        <label>Oldpeak (ST depression):</label>
+        <input type="number" name="oldpeak" step="any" required>
+
+        <label>Slope of the ST segment:</label>
+        <select name="slope" required>
+            <option value="up">Upsloping</option>
+            <option value="flat">Flat</option>
+            <option value="down">Downsloping</option>
+        </select>
+
+        <label>Number of Major Vessels Colored by Fluoroscopy (0–3):</label>
+        <input type="number" name="ca" min="0" max="3" required>
+
+        <label>Thalassemia:</label>
+        <select name="thal" required>
+            <option value="normal">Normal</option>
+            <option value="fixed">Fixed Defect</option>
+            <option value="reversible">Reversible Defect</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>

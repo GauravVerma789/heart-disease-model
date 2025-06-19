@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 50px;
+        }
+        .result-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: auto;
+            text-align: center;
+        }
+        .result-box h2 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>{{ prediction_text }}</h2>
+        <a href="/">Try Again</a>
+    </div>
+</body>
+</html>
